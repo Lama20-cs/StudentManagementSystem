@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.VBox?>
+
+<!-- Main vertical layout container -->
+<VBox spacing="15" alignment="CENTER"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mycompany.studentmanagementsystem.ViewStudentsController">
+
+    <!-- Page title -->
+    <Label text="Students List"/>
+
+    <!-- TableView used to display students -->
+    <TableView fx:id="tableView" prefWidth="600" prefHeight="300">
+
+        <columns>
+
+            <!-- Column for student ID -->
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="100"/>
+
+            <!-- Column for student name -->
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+
+            <!-- Column for student email -->
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="180"/>
+
+            <!-- Column for student major -->
+            <TableColumn fx:id="majorColumn" text="Major" prefWidth="120"/>
+
+            <!-- Column for student grade -->
+            <TableColumn fx:id="gradeColumn" text="Grade" prefWidth="80"/>
+
+        </columns>
+
+    </TableView>
+
+    <!-- Label used to display average grade -->
+    <Label fx:id="averageLabel" text="Average Grade: "/>
+
+    <!-- Button used to load students from files -->
+    <Button text="Load Students" onAction="#loadStudents"/>
+
+    <!-- Button used to return to dashboard -->
+    <Button text="Back" onAction="#goBack"/>
+
+</VBox>

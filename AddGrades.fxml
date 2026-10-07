@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER"
+      spacing="15"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studentmanagementsystem.AddGradesController">
+
+    <!-- Page Title -->
+    <Label text="Add Grades"/>
+
+    <!-- Student ID Field -->
+    <TextField fx:id="studentIdField"
+               promptText="Student ID"/>
+
+    <!-- Grade Field -->
+    <TextField fx:id="gradeField"
+               promptText="Grade"/>
+
+    <!-- Save Button -->
+    <Button text="Save Grade"
+            onAction="#saveGrade"/>
+
+    <!-- Back Button -->
+    <Button text="Back"
+            fx:id="backButton"
+            onAction="#goBack"/>
+
+</VBox>

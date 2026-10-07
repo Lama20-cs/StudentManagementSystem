@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Main dashboard layout for the student management system -->
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.studentmanagementsystem.DashboardController">
+    <children>
+        <!-- Displays the dashboard title -->
+        <Label text="Student Management System" />
+
+        <!-- Button to open the Add Student page -->
+        <Button fx:id="addStudentButton" text="Add Student" onAction="#openAddStudent" />
+
+        <!-- Button to open the Add Grades page -->
+        <Button text="Add Grades" onAction="#openAddGrades" />
+
+        <!-- Button to open the View Students page -->
+        <Button text="View Students" onAction="#openViewStudents" />
+
+        <!-- Button to log out and return to the Login page -->
+        <Button text="Logout" onAction="#logout" />
+    </children>
+</VBox>

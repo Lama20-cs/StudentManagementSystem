@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.VBox?>
+
+<!-- Main vertical layout container -->
+<VBox alignment="CENTER"
+      spacing="20"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mycompany.studentmanagementsystem.ReportsController">
+
+    <!-- Page title -->
+    <Label text="Reports"/>
+
+    <!-- Label that displays total number of students -->
+    <Label fx:id="totalStudentsLabel"
+           text="Total Students: "/>
+
+    <!-- Label that displays average grade -->
+    <Label fx:id="averageGradeLabel"
+           text="Average Grade: "/>
+
+    <!-- Button used to generate the report -->
+    <Button text="Generate Report"
+            onAction="#generateReport"/>
+
+</VBox>

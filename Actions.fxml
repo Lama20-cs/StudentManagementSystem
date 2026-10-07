@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven actions file (Run / Debug / Profile) -->
+<actions>
+
+    <!-- ================= RUN ================= -->
+    <action>
+
+        <!-- Run application -->
+        <actionName>run</actionName>
+
+        <!-- Package type -->
+        <packagings>
+            <packaging>jar</packaging>
+        </packagings>
+
+        <goals>
+
+            <!-- Compile project -->
+            <goal>process-classes</goal>
+
+            <!-- Execute project -->
+            <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+
+        </goals>
+
+        <properties>
+
+            <!-- JVM settings -->
+            <exec.vmArgs></exec.vmArgs>
+
+            <!-- Run arguments -->
+            <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+
+            <!-- Main class -->
+            <exec.mainClass>${packageClassName}</exec.mainClass>
+
+            <!-- Java runtime -->
+            <exec.executable>java</exec.executable>
+
+        </properties>
+
+    </action>
+
+    <!-- ================= DEBUG ================= -->
+    <action>
+
+        <!-- Debug application -->
+        <actionName>debug</actionName>
+
+        <packagings>
+            <packaging>jar</packaging>
+        </packagings>
+
+        <goals>
+
+            <!-- Compile -->
+            <goal>process-classes</goal>
+
+            <!-- Run with debug -->
+            <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+
+        </goals>
+
+        <properties>
+
+            <!-- Debug mode -->
+            <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+
+            <!-- Run args -->
+            <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+
+            <!-- Main class -->
+            <exec.mainClass>${packageClassName}</exec.mainClass>
+
+            <!-- Java runtime -->
+            <exec.executable>java</exec.executable>
+
+            <!-- Enable debugger -->
+            <jpda.listen>true</jpda.listen>
+
+        </properties>
+
+    </action>
+
+    <!-- ================= PROFILE ================= -->
+    <action>
+
+        <!-- Profile application -->
+        <actionName>profile</actionName>
+
+        <packagings>
+            <packaging>jar</packaging>
+        </packagings>
+
+        <goals>
+
+            <!-- Compile -->
+            <goal>process-classes</goal>
+
+            <!-- Run app -->
+            <goal>exec-maven-plugin:exec</goal>
+
+        </goals>
+
+        <properties>
+
+            <!-- JVM args -->
+            <exec.vmArgs></exec.vmArgs>
+
+            <!-- Run args -->
+            <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+
+            <!-- Main class -->
+            <exec.mainClass>${packageClassName}</exec.mainClass>
+
+            <!-- Java runtime -->
+            <exec.executable>java</exec.executable>
+
+        </properties>
+
+    </action>
+
+</actions>
