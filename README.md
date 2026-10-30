@@ -1,6 +1,6 @@
 # Student Management System
 
-A desktop application for managing student records and grades, built with Java and JavaFX as a university group project (team of 4).
+A university group project built with **Java** and **JavaFX**. It is a desktop application that helps a teacher manage students and their grades through a simple graphical interface.
 
 ## Features
 
