@@ -20,7 +20,7 @@ A desktop application for managing student records and grades, built with Java a
 ## My Contributions
 
 - Built the **View Student** screen (`viewStudents.fxml` and `ViewStudentsController.java`), including the students table and record deletion.
-- Developed the **Report** class and `ReportsController.java`, which create and manage the external file where student data is stored.
+- Developed the (`Reports.fxml` and `ReportsController.java`), which create and manage the external file where student data is stored.
 
 ## Demo Login
 
