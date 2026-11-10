@@ -1,28 +1,7 @@
 # Student Management System
 
-A university group project built with **Java** and **JavaFX**. It is a desktop application that helps a teacher manage students and their grades through a simple graphical interface.
+Group project: a Java desktop app for managing students and grades.
 
-## Features
+**What I did:** built the student view screen and the reports screen (`viewStudentsController.java`, `viewStudents.fxml` , `ReportsController.java` , `Reports.fxml`).
 
-- **Login:** Secure entry to the system through a login screen.
-- **Dashborad:** A central page to choose any action: add a student, add a grade, view the report, or log out.
-- **Add Student:** Enter a student's name, ID, email, and major. A confirmation message appears once the student is added.
-- **Add Grade:** Assign a grade to an existing student using their ID.
-- **View Report:** Displays all students in a table with their name, ID, email, major, and grade. Records can also be deleted from this page.
-- **Data Persistence:** All data is saved to an external file, so it is still available the next time the application is opened.
-
-## Technologies
-
-- Java
-- JavaFX / FXML
-- File-based data storage
-
-## My Contributions
-
-- Built the **View Student** screen (`viewStudents.fxml` and `ViewStudentsController.java`), including the students table and record deletion.
-- Developed the (`Reports.fxml` and `ReportsController.java`), which create and manage the external file where student data is stored.
-
-## Demo Login
-
-- Username: `admin`
-- Password: `1234`
+**Tech:** Java, JavaFX
